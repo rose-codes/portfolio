@@ -4,10 +4,13 @@ import React from "react";
 import { motion } from "framer-motion";
 import { links } from "@/lib/data";
 import Link from "next/link";
+import { playfairDisplay } from "@/app/fonts";
 
 export const Navbar = () => {
   return (
-    <nav className="fixed flex top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.75rem] sm:h-[initial] sm:py-0">
+    <nav
+      className={`${playfairDisplay.className} fixed flex top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.75rem] sm:h-[initial] sm:py-0`}
+    >
       <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.94rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-5">
         {links.map((link) => {
           return (
