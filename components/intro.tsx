@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import Image from "next/image";
 import Headshot from "@/public/Headshot.jpeg";
 import { motion } from "framer-motion";

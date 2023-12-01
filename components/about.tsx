@@ -1,5 +1,5 @@
 "use client";
-import { playfairDisplay, openSans } from "@/app/fonts";
+import { openSans } from "@/app/fonts";
 import { SectionHeading } from "./section-heading";
 import { motion } from "framer-motion";
 
