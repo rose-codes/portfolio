@@ -63,14 +63,14 @@ export const projectsData = [
     {
         title: "RxRoster",
         description:
-        "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
+        "I was a full-stack for my capstone and passion project is a Medication Tracker application. It includes authentication using React and Next.js.",
         tags: ["React", "Node.js", "Express", "Next.js", "DynamoDB", "Tailwind"],
         imageUrl: rxRosterImg,
     },
     {
         title: "When Women Understand",
         description:
-        "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
+        "I served as a full-stack developer and technical team lead for this project for women to identify domestic mental abuse. Submission for the Girls Who Code Hackathon-for-Social-Good 2023.",
         tags: ["React", "Node.js", "Express", "Next.js", "Bootstrap"],
         imageUrl: whenWomenImg,
     },
