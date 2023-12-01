@@ -45,7 +45,7 @@ export const Intro = () => {
           </motion.span>
         </div>
       </div>
-      <motion.p
+      <motion.h1
         className="mb-10 mt-4 px-4 font-medium flex flex-col"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
@@ -65,7 +65,7 @@ export const Intro = () => {
           <span>My specialty is </span>
           <span className="underline">developing React apps.</span>
         </span>
-      </motion.p>
+      </motion.h1>
       <motion.div
         className={`${playfairDisplay.className} flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium`}
         initial={{ opacity: 0, y: 100 }}
