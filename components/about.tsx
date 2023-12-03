@@ -2,14 +2,19 @@
 import { openSans } from "@/app/fonts";
 import { SectionHeading } from "./section-heading";
 import { motion } from "framer-motion";
+import { useSectionInView } from "@/lib/hooks";
 
 export const About = () => {
+  const { ref } = useSectionInView("About");
+
   return (
     <motion.section
-      className="flex flex-col items-center justify-center text-center max-w-[50rem] mb-28 leading-8 sm:mb-40"
+      ref={ref}
+      className="flex flex-col items-center justify-center text-center max-w-[50rem] mb-28 leading-8 sm:mb-40 scroll-mt-28"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 100, y: 0 }}
       transition={{ delay: 0.175 }}
+      id="about"
     >
       <SectionHeading>About Me</SectionHeading>
       <p className={`${openSans.className} mb-3`}>
