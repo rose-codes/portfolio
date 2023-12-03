@@ -1,9 +1,11 @@
 "use client";
 
+import React, { useContext } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Navbar } from "./navbar";
 
-export const Header = () => {
+export const Header: React.FC = () => {
   return (
     <header className="z-[999] relative">
       <motion.div
