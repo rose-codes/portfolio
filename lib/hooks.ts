@@ -3,20 +3,16 @@ import { useActiveSectionContext } from "@/context/active-section-context";
 import { useEffect } from "react";
 import type { SectionName } from "./types";
 
-type useSectionInViewProps = {
-    sectionName: SectionName;
-}
-
-export const useSectionInView = ({ sectionName, }: useSectionInViewProps) => {
+export const useSectionInView = (sectionName: SectionName, threshold = 0.75) => {
     const { ref, inView } = useInView({
-        threshold: 0.75,
+        threshold
     });
     const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
 
     useEffect(() => {
     if (inView && Date.now() - timeOfLastClick > 1000) {
-        setActiveSection("About");
+        setActiveSection(sectionName);
     }
-    }, [inView, setActiveSection, timeOfLastClick]);
+    }, [inView, setActiveSection, timeOfLastClick, sectionName]);
     return { ref }
 }
