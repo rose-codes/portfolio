@@ -2,21 +2,10 @@
 import { openSans } from "@/app/fonts";
 import { SectionHeading } from "./section-heading";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useActiveSectionContext } from "@/context/active-section-context";
-import { useEffect } from "react";
+import { useSectionInView } from "@/lib/hooks";
 
 export const About = () => {
-  const { ref, inView } = useInView({
-    threshold: 0.75,
-  });
-  const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
-
-  useEffect(() => {
-    if (inView && Date.now() - timeOfLastClick > 1000) {
-      setActiveSection("About");
-    }
-  }, [inView, setActiveSection, timeOfLastClick]);
+  const { ref } = useSectionInView("About");
 
   return (
     <motion.section
