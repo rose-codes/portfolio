@@ -14,7 +14,11 @@ import { useSectionInView } from "@/lib/hooks";
 export const Experience = () => {
   const { ref, inView } = useSectionInView("Experience", 0.2);
   return (
-    <section id="experience" ref={ref} className={`${openSans.className}`}>
+    <section
+      id="experience"
+      ref={ref}
+      className={`${openSans.className} scroll-mt-28 mb-28 sm:mb-40`}
+    >
       <SectionHeading>My Software Engineer Journey</SectionHeading>
       <VerticalTimeline lineColor="">
         {experiencesData.map((experience, index) => {
