@@ -35,15 +35,7 @@ export const Contact = () => {
         </a>{" "}
         or through this form.
       </p>
-      <form
-        className="mt-10 flex flex-col"
-        action={async (formData) => {
-          console.log("Running on client");
-          console.log(formData.get("senderEmail"));
-          console.log(formData.get("message"));
-          await sendEmail(formData);
-        }}
-      >
+      <form className="mt-10 flex flex-col" action={sendEmail}>
         <input
           className="h-14 rounded-lg borderBlack px-4 active:border-black focus-visible:!outline-black focus-visible:!outline focus-visible:!outline-1"
           name="senderEmail"
