@@ -3,6 +3,7 @@ import "./globals.css";
 import { Header } from "@/components/header";
 import { Toaster } from "react-hot-toast";
 import { Footer } from "@/components/footer";
+import { ThemeSwitch } from "@/components/theme-switch";
 
 export const metadata = {
   title: "Rose Le | Portfolio",
@@ -26,6 +27,7 @@ export default function RootLayout({
           <Footer />
           <Toaster position="top-right" />
         </ActiveSectionContextProvider>
+        <ThemeSwitch />
       </body>
     </html>
   );
