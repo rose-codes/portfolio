@@ -35,14 +35,17 @@ export const Contact = () => {
         </a>{" "}
         or through this form.
       </p>
-      <form className="mt-10 flex flex-col" action={sendEmail}>
+      <form
+        className="mt-10 flex flex-col"
+        action={async (formData) => await sendEmail(formData)}
+      >
         <input
           className="h-14 rounded-lg borderBlack px-4 active:border-black focus-visible:!outline-black focus-visible:!outline focus-visible:!outline-1"
           name="senderEmail"
           type="email"
           placeholder="Your email"
           required
-          maxLength={500}
+          maxLength={5000}
         />
         <textarea
           className="h-52 my-3 rounded-lg borderBlack p-4 focus-visible:!outline-black focus-visible:!outline  focus-visible:!outline-1"
