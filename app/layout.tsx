@@ -2,6 +2,7 @@ import { ActiveSectionContextProvider } from "@/context/active-section-context";
 import "./globals.css";
 import { Header } from "@/components/header";
 import { Toaster } from "react-hot-toast";
+import { Footer } from "@/components/footer";
 
 export const metadata = {
   title: "Rose Le | Portfolio",
@@ -22,6 +23,7 @@ export default function RootLayout({
         <ActiveSectionContextProvider>
           <Header />
           {children}
+          <Footer />
           <Toaster position="top-right" />
         </ActiveSectionContextProvider>
       </body>
