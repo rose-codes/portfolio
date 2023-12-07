@@ -105,7 +105,7 @@ export const projectsData = [
     {
         title: "When Women Understand",
         description:
-        "I served as a full-stack developer and technical team lead for this project for women to identify domestic mental abuse. Submission for the Girls Who Code Hackathon-for-Social-Good 2023.",
+        "I served as a full-stack developer and technical team lead for this project for women to identify domestic emotional and mental abuse.",
         tags: ["React", "Node.js", "Express", "Next.js", "Bootstrap"],
         imageUrl: whenWomenImg,
     },
