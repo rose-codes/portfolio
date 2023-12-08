@@ -29,7 +29,7 @@ export const Contact = () => {
       }}
     >
       <SectionHeading>Contact me</SectionHeading>
-      <p className="text-gray-700 -mt-5">
+      <p className="text-gray-700 -mt-5 dark:text-white/80">
         Please contact me directly via{" "}
         <a className="underline" href="mailto:rosehle33@gmail.com">
           email
@@ -37,7 +37,7 @@ export const Contact = () => {
         or through this form.
       </p>
       <form
-        className="mt-10 flex flex-col"
+        className="mt-10 flex flex-col dark:text-black/80"
         action={async (formData) => {
           const { data, error } = await sendEmail(formData);
 
@@ -49,7 +49,7 @@ export const Contact = () => {
         }}
       >
         <input
-          className="h-14 rounded-lg borderBlack px-4 active:border-black focus-visible:!outline-black focus-visible:!outline focus-visible:!outline-1"
+          className="h-14 rounded-lg borderBlack px-4 active:border-black focus-visible:!outline-black focus-visible:!outline focus-visible:!outline-1 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
           name="senderEmail"
           type="email"
           placeholder="Your email"
@@ -57,7 +57,7 @@ export const Contact = () => {
           maxLength={5000}
         />
         <textarea
-          className="h-52 my-3 rounded-lg borderBlack p-4 focus-visible:!outline-black focus-visible:!outline  focus-visible:!outline-1"
+          className="h-52 my-3 rounded-lg borderBlack p-4 focus-visible:!outline-black focus-visible:!outline  focus-visible:!outline-1 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
           name="message"
           placeholder="Your message"
           required

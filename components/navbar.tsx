@@ -8,11 +8,6 @@ import clsx from "clsx";
 import React from "react";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
-// type HeaderProps = {
-//   activeSection: string;
-//   setActiveSection: React.Dispatch<React.SetStateAction<"Home" | "About" | "Projects" | "Skills" | "Experience" | "Contact">;
-// };
-
 export const Navbar = () => {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
@@ -31,8 +26,11 @@ export const Navbar = () => {
             >
               <Link
                 className={clsx(
-                  "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition",
-                  { "text-gray-950": activeSection === link.name }
+                  "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300",
+                  {
+                    "text-gray-950 dark:text-gray-200":
+                      activeSection === link.name,
+                  }
                 )}
                 href={link.hash}
                 onClick={() => {
@@ -43,7 +41,7 @@ export const Navbar = () => {
                 {link.name}
                 {link.name === activeSection && (
                   <motion.span
-                    className="bg-orange-100 rounded-full absolute inset-0 -z-10"
+                    className="bg-orange-100 rounded-full absolute inset-0 -z-10 dark:bg-orange-400/50"
                     layoutId="activeSelection"
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                   ></motion.span>
