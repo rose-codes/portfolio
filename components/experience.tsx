@@ -8,7 +8,6 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "@/lib/data";
-import { openSans } from "@/app/fonts";
 import { useSectionInView } from "@/lib/hooks";
 import { useTheme } from "@/context/theme-context";
 
@@ -16,11 +15,7 @@ export const Experience = () => {
   const { ref, inView } = useSectionInView("Experience", 0.2);
   const { theme } = useTheme();
   return (
-    <section
-      id="experience"
-      ref={ref}
-      className={`${openSans.className} scroll-mt-28 mb-28 sm:mb-40`}
-    >
+    <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
       <SectionHeading>My Software Engineer Journey</SectionHeading>
       <VerticalTimeline lineColor="">
         {experiencesData.map((experience, index) => {
@@ -33,7 +28,9 @@ export const Experience = () => {
                 }}
                 contentStyle={{
                   background:
-                    theme === "light" ? "#f3f4f6" : "rgba(255, 255, 255, 0.05)",
+                    theme === "light"
+                      ? "rgba(243, 244, 246, 0.5)"
+                      : "rgba(255, 255, 255, 0.05)",
                   boxShadow: "none",
                   border: "1px solid rgba(0, 0, 0, 0.05)",
                   textAlign: "left",

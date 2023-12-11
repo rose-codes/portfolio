@@ -1,5 +1,5 @@
 "use client";
-import { openSans } from "@/app/fonts";
+
 import { SectionHeading } from "./section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
@@ -17,7 +17,7 @@ export const About = () => {
       id="about"
     >
       <SectionHeading>About Me</SectionHeading>
-      <p className={`${openSans.className} mb-3`}>
+      <p className="mb-3">
         <span>
           After graduating from University of California, Santa Barbara with a
           degree in{" "}
@@ -50,7 +50,7 @@ export const About = () => {
           full-time position as a software engineer/web developer.{" "}
         </span>
       </p>
-      <p className={`${openSans.className}`}>
+      <p>
         <span>
           When I’m not coding, I enjoy reading, playing video games (Sims 2 and
           Tekken ftw!), doing pilates, doll collecting, researching skincare,

@@ -5,8 +5,9 @@ import Headshot from "@/public/Headshot.jpeg";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight, BsGithub, BsLinkedin } from "react-icons/bs";
+import { SiGoogledocs } from "react-icons/si";
 import { HiDownload } from "react-icons/hi";
-import { playfairDisplay, openSans } from "@/app/fonts";
+import { playfairDisplay } from "@/app/fonts";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
@@ -61,9 +62,7 @@ export const Intro = () => {
         <span
           className={`${playfairDisplay.className} font-bold text-3xl sm:text-5xl !leading-[1.5]`}
         >{`Hi, I\'m Rose.`}</span>
-        <span
-          className={`${openSans.className} text-lg sm:text-xl !leading-[1.5] `}
-        >
+        <span className="text-lg sm:text-xl !leading-[1.5]">
           <span>{`I\'m a `}</span>
           <span className="font-bold">Full-Stack Software Engineer </span>
           <span>with </span>
@@ -92,12 +91,12 @@ export const Intro = () => {
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
         <a
-          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
-          href="/Resume.pdf"
+          className="bg-white px-7 py-3 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          href="https://drive.google.com/file/d/1JWejS4tYwUeSleWp27hPxvbduM4z5jHT/view?usp=drive_link"
           download
         >
-          Download Resume{" "}
-          <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
+          Resume{" "}
+          <SiGoogledocs className="opacity-60 group-hover:translate-y-1 transition" />
         </a>
         <a
           className="bg-white px-7 py-3 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
